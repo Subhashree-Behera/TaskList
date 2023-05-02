@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(200deg, #f7f329, #35db59);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #ffffff;
+    margin: 100px auto 20px;
+    padding:  40px 30px 70px;
+    border-radius:  10px;
+}
+
+.todo-app h2{
+    color: #000103;
+    display:  flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #77bb57;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: linear-gradient(200deg, #000000,#35db59 );
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 40px;
+    margin-bottom: 2px;
+}
+    
+
+ul li::before{
+    content: '';
+    position:  absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through ;
+    background: #b0e698;
+
+}
+
+ul li.checked::before{
+    background-image: url(images/checklist.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 2.5px;
+    top: 2.5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+.popup-container{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border: #b0e698;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.popup-content{
+    color: black;
+    font-weight: bold;
+}
+
+.hidden{
+    display: none;
+}
+
+.empty-field{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border: #b0e698;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.empty-content{
+    color: red;
+    font-weight: bold;
+}
